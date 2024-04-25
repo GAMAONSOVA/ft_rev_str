@@ -1,19 +1,21 @@
 void ft_rev_str(char *str)
 {
-    int up = 0;
-    char lot;
-    while (up > 0)
-    {
-        lot = str[up];
-        str[up] = lot;
-        up++;
-        lot--;
-
-    }
+  int a = 0;
+  int b = strlen(str) -1;
+  char c;
+  while (a > b)
+  {
+    c=str[a];
+    str[a]=str[b];
+    str[b]=c;
+    a++;
+    b--;
+  }
+  
+   
 }
 int main()
 {
-    char sr[6]= "abcdef";
+    char sr[7]= "abcdef\0";
     ft_rev_str(sr);
 }
-
